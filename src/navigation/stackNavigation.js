@@ -5,7 +5,7 @@ import {ProfileScreen} from '../components/screens/profileScreen';
 import {MapScreen} from '../components/screens/mapScreen';
 import {DataScreen} from '../components/screens/dataScreen';
 import {SettingScreen} from '../components/screens/settingSetting';
-
+import {CameraScreen} from '../components/features/camera';
 const Stack = createNativeStackNavigator();
 
 export const HomeStack = () => {
@@ -28,6 +28,7 @@ export const ProfileStack = () => {
   return (
     <Stack.Navigator>
       <Stack.Screen name="Profile" component={ProfileScreen} />
+      <Stack.Screen name="Camera" component={CameraScreen} />
     </Stack.Navigator>
   );
 };

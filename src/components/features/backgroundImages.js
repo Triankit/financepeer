@@ -22,6 +22,6 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   imageVisibilty: {
-    opacity: 0.3,
+    opacity: 0.4,
   },
 });
