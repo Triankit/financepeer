@@ -75,5 +75,8 @@
 	<string>$(PRODUCT_NAME) choose your photos</string>
 	<key>NSCameraUsageDescription</key>
 	<string>$(PRODUCT_NAME) add from camera</string>
+	 <key>NSLocationWhenInUseUsageDescription</key>
+  <string>Program requires GPS to track cars and job orders</string>
+
 </dict>
 </plist>
