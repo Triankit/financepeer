@@ -9,8 +9,6 @@ export const ApiScreen = () => {
       const response = await Axios.get(
         'https://jsonplaceholder.typicode.com/posts',
       );
-      console.log(response.data);
-
       setItem(response.data);
     })();
   }, []);
