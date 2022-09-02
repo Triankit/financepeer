@@ -5,7 +5,7 @@ import {
   MapStack,
   DataStack,
   ProfileStack,
-  SettingStack,
+  ApiStack,
 } from './stackNavigation';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
 
@@ -59,12 +59,12 @@ export const TabNavigation = () => {
         }}
       />
       <Tab.Screen
-        name="SettingScreen"
-        component={SettingStack}
+        name="ApiScreen"
+        component={ApiStack}
         options={{
-          tabBarLabel: 'Settings',
+          tabBarLabel: 'API',
           tabBarIcon: ({color}) => (
-            <FontAwesome name="gear" color={color} size={26} />
+            <FontAwesome name="feed" color={color} size={26} />
           ),
         }}
       />

@@ -4,7 +4,7 @@ import {HomeScreen} from '../components/screens/homeScreen';
 import {ProfileScreen} from '../components/screens/profileScreen';
 import {MapScreen} from '../components/screens/mapScreen';
 import {DataScreen} from '../components/screens/dataScreen';
-import {SettingScreen} from '../components/screens/settingSetting';
+import {ApiScreen} from '../components/screens/apiScreen';
 import {CameraScreen} from '../components/features/camera';
 const Stack = createNativeStackNavigator();
 
@@ -41,10 +41,10 @@ export const DataStack = () => {
   );
 };
 
-export const SettingStack = () => {
+export const ApiStack = () => {
   return (
     <Stack.Navigator>
-      <Stack.Screen name="Settings" component={SettingScreen} />
+      <Stack.Screen name="Api" component={ApiScreen} />
     </Stack.Navigator>
   );
 };

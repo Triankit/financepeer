@@ -23,28 +23,33 @@ export const DataScreen = () => {
 
   return (
     <React.Fragment>
-      <Button mode="tonal" onPress={() => readData()}>
+      <Button style={styles.button} mode="contained" onPress={() => readData()}>
         Read Data
       </Button>
 
-      <FlatList
-        data={items}
-        renderItem={({item, index}) => (
-          <View style={styles.item}>
-            <Text style={styles.id}>userId : {item.userId}</Text>
-            <Text style={styles.id}>id : {item.id}</Text>
-            <Text style={styles.title}>title : {item.title}</Text>
-            <Text style={styles.title}>body : {item.body}</Text>
-          </View>
-        )}
-      />
+      {showData && (
+        <FlatList
+          data={items}
+          renderItem={({item}) => (
+            <View style={styles.item}>
+              <Text style={styles.id}>userId : {item.userId}</Text>
+              <Text style={styles.id}>id : {item.id}</Text>
+              <Text style={styles.title}>title : {item.title}</Text>
+              <Text style={styles.title}>body : {item.body}</Text>
+            </View>
+          )}
+        />
+      )}
     </React.Fragment>
   );
 };
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
+  button: {
+    padding: 8,
+    marginTop: 16,
+    marginHorizontal: '25%',
+    border: 4,
   },
   item: {
     backgroundColor: '#CD9FF0',
