@@ -12,6 +12,7 @@
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		22EFC55E7102EFEC21461844 /* libPods-financepeer-financepeerTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 448C6C852EDAF0B5F74E84BD /* libPods-financepeer-financepeerTests.a */; };
+		28B3520F28C0BE1600C18A99 /* swiftSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28B3520E28C0BE1600C18A99 /* swiftSupport.swift */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
 		F2F52588376FC9895EE832C4 /* libPods-financepeer.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 37BFF52496487025DCB3B748 /* libPods-financepeer.a */; };
 /* End PBXBuildFile section */
@@ -37,6 +38,8 @@
 		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = financepeer/Images.xcassets; sourceTree = "<group>"; };
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = financepeer/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = financepeer/main.m; sourceTree = "<group>"; };
+		28B3520D28C0BE1600C18A99 /* financepeer-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "financepeer-Bridging-Header.h"; sourceTree = "<group>"; };
+		28B3520E28C0BE1600C18A99 /* swiftSupport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = swiftSupport.swift; sourceTree = "<group>"; };
 		37BFF52496487025DCB3B748 /* libPods-financepeer.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-financepeer.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		448C6C852EDAF0B5F74E84BD /* libPods-financepeer-financepeerTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-financepeer-financepeerTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4581CAFC149B45D2D061B1FC /* Pods-financepeer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-financepeer.release.xcconfig"; path = "Target Support Files/Pods-financepeer/Pods-financepeer.release.xcconfig"; sourceTree = "<group>"; };
@@ -114,7 +117,6 @@
 				06EC11CAAD29AEB3097A8833 /* Pods-financepeer-financepeerTests.debug.xcconfig */,
 				F787A562A3B194268FAB21D3 /* Pods-financepeer-financepeerTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -128,12 +130,14 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
+				28B3520E28C0BE1600C18A99 /* swiftSupport.swift */,
 				13B07FAE1A68108700A75B9A /* financepeer */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
 				00E356EF1AD99517003FC87E /* financepeerTests */,
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				6432DA53DCC410E8AAF1B4CB /* Pods */,
+				28B3520D28C0BE1600C18A99 /* financepeer-Bridging-Header.h */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -208,7 +212,7 @@
 						TestTargetID = 13B07F861A680F5B00A75B9A;
 					};
 					13B07F861A680F5B00A75B9A = {
-						LastSwiftMigration = 1120;
+						LastSwiftMigration = 1340;
 					};
 				};
 			};
@@ -411,6 +415,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				28B3520F28C0BE1600C18A99 /* swiftSupport.swift in Sources */,
 				13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
 			);
@@ -431,6 +436,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 06EC11CAAD29AEB3097A8833 /* Pods-financepeer-financepeerTests.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -458,6 +464,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = F787A562A3B194268FAB21D3 /* Pods-financepeer-financepeerTests.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
 				INFOPLIST_FILE = financepeerTests/Info.plist;
@@ -498,6 +505,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = financepeer;
+				SWIFT_OBJC_BRIDGING_HEADER = "financepeer-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -523,6 +531,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = financepeer;
+				SWIFT_OBJC_BRIDGING_HEADER = "financepeer-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
