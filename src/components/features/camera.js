@@ -1,7 +1,8 @@
-import React, {useState} from 'react';
+/* eslint-disable react-native/no-inline-styles */
+import React from 'react';
 import {useCamera} from 'react-native-camera-hooks';
 import {RNCamera} from 'react-native-camera';
-import {TouchableOpacity, StyleSheet} from 'react-native';
+import {StyleSheet} from 'react-native';
 import {Button} from 'react-native-paper';
 
 export const CameraScreen = ({navigation}) => {
@@ -18,10 +19,12 @@ export const CameraScreen = ({navigation}) => {
       type={RNCamera.Constants.Type.front}
       captureAudio={false}
       style={styles.profileCamera}>
-      <TouchableOpacity />
-      <Button onPress={snap} style={styles.cameraButton} icon="camera-front">
-        Capture
-      </Button>
+      <Button
+        onPress={snap}
+        style={styles.cameraButton}
+        icon="camera"
+        labelStyle={{fontSize: 45}}
+      />
     </RNCamera>
   );
 };
@@ -33,10 +36,7 @@ const styles = StyleSheet.create({
   },
   cameraButton: {
     flex: 1,
-    fontSize: 32,
-    fontWeight: 'bold',
-    padding: 8,
+    paddingTop: 16,
     justifyContent: 'flex-end',
-    width: '100%',
   },
 });
